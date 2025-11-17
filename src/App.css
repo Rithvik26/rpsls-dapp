@@ -1,0 +1,4 @@
+body { background: #f7f7f9; color:#222; }
+button { padding:8px 12px; border-radius:6px; cursor:pointer; }
+input, select { padding:6px 8px; border-radius:6px; }
+.container { background:white; padding:12px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
