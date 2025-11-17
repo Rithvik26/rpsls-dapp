@@ -8,7 +8,7 @@ export default function WalletConnect({ onConnected }) {
 
   async function connectWallet() {
     if (!window.ethereum) {
-      alert("âŒ MetaMask not detected! Please install MetaMask extension.");
+      alert("MetaMask not detected! Please install MetaMask extension.");
       window.open("https://metamask.io/download/", "_blank");
       return;
     }
@@ -42,11 +42,9 @@ export default function WalletConnect({ onConnected }) {
       console.log("Connected:", userAddress);
       console.log("Network:", networkName, "Chain ID:", net.chainId);
 
-      
-
     } catch (error) {
       console.error("Connection error:", error);
-      alert("âŒ Failed to connect: " + (error.message || error));
+      alert("Failed to connect: " + (error.message || error));
     } finally {
       setIsConnecting(false);
     }
@@ -124,10 +122,10 @@ export default function WalletConnect({ onConnected }) {
         }}
       >
         {isConnecting
-          ? "ðŸ”„ Connecting..."
+          ? "🔄 Connecting..."
           : address
-          ? `âœ… ${address.substring(0, 6)}...${address.substring(38)}`
-          : "ðŸ¦Š Connect MetaMask"}
+          ? `✅ ${address.substring(0, 6)}...${address.substring(38)}`
+          : "🦊 Connect MetaMask"}
       </button>
       
       {network && (
